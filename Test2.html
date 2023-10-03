@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>HTML and CSS for Complete Beginners: Example 4-1 - Simple landing page</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="CSS-testing2.css">
+    <!-- 
+        1. penamaan class tidak boleh menggunakan angka 
+
+        literasi: Mengenal 4 Macam Gaya Penulisan Case dalam Kode Program
+        
+     -->
+
+        <style>
+            * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+            body {
+                font-family: 'Inter', sans-serif;
+                color: rgb(0, 0, 0);
+                padding: 1rem 1rem 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .section-9 h1 {
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 1.9rem;
+            }
+
+            .services-1 p {
+                font-size: 2rem;
+                font-weight: 700px;
+                bottom: 1;
+                left: 1;
+            }
+
+            p {
+                font-size: 1.3rem;
+                font-weight: 600;
+                padding-top: 1rem;
+                padding-bottom: 3rem;
+            }
+
+            p.section-3 {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            div {
+                padding: 2rem 2rem;
+            }
+
+            .section-1-1 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 4rem;
+            }
+
+            .section-2-1 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 4rem;
+            }
+
+            .section-3 p {
+                text-align: center;
+            }
+
+            .section-4-1 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 4rem;
+                padding: 0;
+            }
+
+            .section-5 {
+                text-align: center;
+            }
+
+            .section-6 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 4rem;
+                
+            }
+
+            .section-7 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 4rem;
+            }
+
+            .section-8 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 4rem;
+            }
+
+            .section-8 {
+                padding: 2rem 2rem;
+                justify-items: center;
+                align-items: center;
+            }
+
+            .section-9 {
+                padding: 3rem 0 0 0;
+            }
+
+            .services-1 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 1rem;
+                justify-items: center;
+                align-items: center;
+            }
+
+            .product-showcase {
+                background-image: url(picture/product-showcase.jpg);
+                background-size: 100%;
+                position: relative;
+            }
+            .company-profile {
+                background-image: url(picture/company-profile.jpg);
+                background-size: 100%;
+                position: relative;
+            }
+            .about-us {
+                background-image: url(picture/about-us.jpg);
+                background-size: 200%;
+                position: relative;
+            }
+            .choice-of-materials {
+                background-image: url(picture/choice-of-materials.jpg);
+                background-size: 100%;
+                position: relative;
+            }
+
+            .product-showcase > p,
+            .company-profile > p,
+            .about-us > p,
+            .choice-of-materials > p{
+                position: absolute;
+                bottom: 0;
+                padding: 0;
+            }
+
+            .product-showcase,
+            .company-profile,
+            .about-us,
+            .choice-of-materials {
+                color: white;
+                text-transform: uppercase;
+                width: 16.15rem;
+                height: 21.6rem;
+                padding: 0;
+                margin: 0;
+            }
+
+            .btn-see-product {
+                border: 1.5px solid;
+                padding: 0.5rem 2.5rem;
+            }
+
+            .footer-container {
+                display: grid;
+                grid-template-columns: 3fr 1fr 1fr 1fr;
+            }
+
+            footer p, ul {
+                font-size: 0.5rem;
+                font-weight: 600;
+            }
+
+            .blank{
+                padding-right: 1rem 2rem 1rem 1rem;
+            }
+
+            .info {
+                padding: 1rem 1rem 1rem 2rem;
+            }
+
+            .about,
+            .follow-us {
+                padding : 1rem;
+            }
+
+            .blank {
+                background-color: rgb(220, 220, 220);
+                height: 15rem;
+            }
+
+            h3 {
+                font-weight: 5000;
+                font-size: 0.9rem;
+            }
+
+            .active, input.text-btn {
+                border: none;
+            }
+
+
+            .username{
+                display: flex;
+                flex-direction: row;
+                width: 13%;
+                border: none;
+                background-color: white;
+            }
+
+            .main-header{
+                display: flex;
+                flex-direction: row;
+                padding: 2rem 2rem 2rem 2rem;
+            }
+
+            .username{
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+            }
+
+            .username > img{
+                width: 30%;
+            }
+
+            .username > a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .header-list {
+                display: flex;
+                gap: 2rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            input {
+                border: 1px solid black;
+                height: 1rem;
+                
+            }
+
+            .search-box {
+                display: flex;
+                position: relative;
+                
+            }
+
+            .search-input{
+                padding: 1rem;
+                
+            }
+
+            .button-search {
+                background-color: white;
+                border: none;
+                position: absolute;
+                right: 40px;
+                bottom: 35px;
+                cursor: pointer;
+            }
+
+            body {
+                max-width: 98%;
+                margin: 0 auto;
+            }
+
+            @media screen and (max-width: 950px) {
+                header a,
+                header img,
+                header input {
+                    display: none;
+                }
+                
+                h1 {
+                font-size: 2rem;
+                padding: 1rem 0 1rem 0;
+            }
+
+            h2 {
+                font-size: 2rem;
+                padding: 1rem 0 1rem 0;
+            }
+
+            .services-1 p {
+                font-size: 1rem;
+                font-weight: 700px;
+                padding: 1rem 0 1rem 0;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 1rem 0 1rem 0;
+            }
+
+            p.section-3 {
+                font-size: .5rem;
+                font-weight: 600;
+                padding: 1rem 0 1rem 0;
+            }
+
+            .btn-see-product {
+                border: 1.5px solid;
+                padding: 0.5rem 1.7rem;
+                font-size: 0.7rem;
+                font-weight: 1000;
+            }
+
+            .section-1-1 {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .section-1 {
+                padding: 1rem 0 1rem 0;
+            }
+
+            .section-2-1 {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem 0 1rem 0;
+            }
+
+            .section-3 p {
+                text-align: center;
+                padding: 1rem 0 1rem 0;
+            }
+
+            .section-4-1 {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem 0 0 0;
+            }
+
+            .section-5 {
+                text-align: center;
+                padding: 1rem 0 3rem 0;
+            }
+
+            .section-6 {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 1rem;
+                padding: 1.5rem 0 1.5rem 0;
+                
+            }
+
+            .section-7 {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 1rem;
+                padding: 1.5rem 0 1.5rem 0;
+            }
+
+            .section-8 {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 1rem;
+                padding: 0;
+                padding: 1.5rem 0 1.5rem 0;
+            }
+
+            .section-9 {
+                padding: 3rem 0 4rem 0;
+            }
+
+            .section-9 h1 {
+                padding: 1rem 0 3rem 0;
+            }
+
+            .services-1 {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                justify-items: center;
+                align-items: center;
+                padding: 0;
+            }
+
+            #stairs {
+                order: -1;
+            }
+
+            #chair {
+                order: -1;
+            }
+
+            .product-showcase {
+                background-image: url(picture/product-showcase.jpg);
+                background-size: 100%;
+                position: relative;
+            }
+            .company-profile {
+                background-image: url(picture/company-profile.jpg);
+                background-size: 100%;
+                position: relative;
+            }
+            .about-us {
+                background-image: url(picture/about-us.jpg);
+                background-size: 200%;
+                position: relative;
+            }
+            .choice-of-materials {
+                background-image: url(picture/choice-of-materials.jpg);
+                background-size: 100%;
+                position: relative;
+            }
+
+            .product-showcase,
+            .company-profile,
+            .about-us,
+            .choice-of-materials {
+                color: white;
+                text-transform: uppercase;
+                width: 19.15rem;
+                height: 24.6rem;
+                padding: 0;
+                margin: 0;
+            }
+
+            .product-showcase > p,
+            .company-profile > p,
+            .about-us > p,
+            .choice-of-materials > p{
+                font-size: 2rem;
+                position: absolute;
+                bottom: 2rem;
+                left: 1.5rem;
+                padding: 0;
+            }
+
+            div {
+                padding: 0;
+            }
+
+            footer {
+                display: none;
+            }
+
+            }
+
+        </style>
+	</head>
+    <body>
+        <header class="main-header">
+            <button class="username">
+                <img src="picture/user.svg" alt="">
+                <a href="#">Your Name</a>
+            </button>
+
+            <div class="header-list">
+                <a href="">Home</a>
+                <a href="">Product</a>
+                <a href="">Cart</a>
+                <a href="">About</a>
+            </div>
+
+            <div class="search-box">
+                <input class="search-input" type="search" name="" id="">
+                <button class="button-search"><img src="picture/search.svg" alt="Search"></button>
+            </div>
+        </header>
+
+        <div class="section-1">
+        <img src="picture/livingroom.jpg" alt="Living Room">
+        <div class="section-1-1">
+            <h1>Welcome To Our Bali Home Furniture</h1>
+            <div class="section-1-2">
+                <p>Discover the Art of Home Transformation at Our 
+                    Furniture Shop. Step into a world of style and 
+                    comfort where your living spaces come alive. From 
+                    elegant sofas to exquisite dining sets, our curated 
+                    collection offers a symphony of designs to 
+                    harmonize with your vision.
+                </p>
+
+                <a href="" class="btn-see-product">See Product</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="section-2-1">
+            <img src="picture/lamp1.jpg" alt="Living Room">
+            <div>
+            <h2>Explore craftsmanship that 
+                transcends time
+            </h2>
+            <p>Are you ready to turn your house into a home that truly 
+                reflects your unique taste? Look no further! Our 
+                furniture shop is your one-stop destination for finding 
+                the perfect pieces that will breathe life into your living 
+                spaces.
+                <br>
+                Immerse yourself in a world of exquisite craftsmanship 
+                and curated designs that cater to every aesthetic. 
+                From classic to contemporary, our wide range of 
+                furniture options ensures that there's something for 
+                everyone.
+            </p>
+            </div>
+        </div>
+            <div class="section-3">
+                <img src="picture/bedroom.jpg" alt="Bed Room">
+                <p>
+                    “Our knowledgeable staff is dedicated to helping you discover the 
+                    pieces that fit seamlessly into your lifestyle and preferences. We 
+                    understand that furniture is more than just functional – it's an 
+                    expression of who you are."
+                </p>
+            </div>
+            <div class="section-4-1">
+                <div>
+                    <h2>
+                        Explore craftsmanship that 
+                        transcends time
+                    </h2>
+                    <p>
+                        Are you ready to turn your house 
+                        into a home that truly reflects your 
+                        unique taste? Look no further! Our 
+                        furniture shop is your one-stop 
+                        destination for finding the perfect 
+                        pieces that will breathe life into 
+                        your living spaces.
+                        <br>
+                        Immerse yourself in a world of 
+                        exquisite craftsmanship and 
+                        curated designs that cater to 
+                        every aesthetic. From classic to 
+                        contemporary, our wide range of 
+                        furniture options ensures that 
+                        there's something for everyone.
+                    </p>
+                </div>
+                <img src="picture/chair.jpg" id="chair" alt="Chair">
+            </div>
+        </div>
+            <div class="section-5">
+                <h1>
+                    Our Products
+                </h1>
+            </div>
+            <div class="section-6">
+                <img src="picture/table.jpg" alt="Table">
+                <div>
+                <h2>Tables</h2>
+                <p>Step into a world where time-honored craftsmanship meets 
+                    contemporary design with our exquisite Mastercraft Legacy 
+                    Dining Table. This table is more than just a piece of furniture; it's a 
+                    journey through the annals of skilled artistry that spans 
+                    generations. 
+                    <br>
+                    Handcrafted by master artisans who have inherited the secrets of 
+                    their craft, this table boasts a harmonious blend of classic and 
+                    modern elements that seamlessly merge functionality with 
+                    aesthetics.
+                </p>
+                    <a href="" class="btn-see-product">See Product</a>
+                </div>
+            </div>
+            <div class="section-7">
+                <div>
+                <h2>Chair</h2>
+                <p>
+                    Introducing a masterpiece that epitomizes the fusion of comfort, 
+                    design, and craftsmanship – The Artisan's Touch Chair. This 
+                    exceptional chair transcends mere functionality, elevating itself to 
+                    a work of art that graces any space with an air of sophistication 
+                    and grace. 
+                    <br>
+                    Crafted by the hands of skilled artisans who have honed their 
+                    craft through generations, this chair is a testament to the power 
+                    of tradition meeting contemporary aesthetics.
+                </p>
+                <a href="" class="btn-see-product">See Product</a>
+                </div>
+                <img src="picture/stairs.jpg" id="stairs" alt="Chair">
+            </div>
+            <div class="section-8">
+                <img src="picture/lamp2.jpg" alt="Lamp">
+                <div>
+                <h2>Lamp</h2>
+                <p>Are you ready to turn your house into a home that truly reflects 
+                    your unique taste? Look no further! Our furniture shop is your 
+                    one-stop destination for finding the perfect pieces that will 
+                    breathe life into your living spaces.
+                    <br>
+                    Immerse yourself in a world of exquisite craftsmanship and 
+                    curated designs that cater to every aesthetic. From classic to 
+                    contemporary, our wide range of furniture options ensures that 
+                    there's something for everyone.
+                </p>
+                    <a href="" class="btn-see-product">See Product</a>
+                </div>
+            </div>
+            <div class="section-9">
+                <h1>
+                    Our Products
+                </h1>
+
+                    <div class="services-1">
+                        <div class="product-showcase">
+                            <p>product showcase</p>
+                        </div>
+                        <div class="company-profile">
+                            <p>company profile</p>
+                        </div>
+                        <div class="about-us">
+                            <p>about us</p>
+                        </div>
+                        <div class="choice-of-materials">
+                            <p>choice of materials</p>
+                        </div>
+                    </div>
+            </div>
+<footer>
+    <div class="footer-container">
+        <div class="blank">
+
+        </div>
+
+        <div class="info">
+            <h3>Info</h3>
+            <p>TDS is a carefully curated online 
+                design store. Featuring simple, 
+                beautiful and thoughtfully designed 
+                products for everyday use.</p>
+        </div>
+
+        <div class="about">
+            <h3>About</h3>
+            <p>Contact Us</p>
+        </div>
+        
+        <div class="follow-us">
+            <h3>Follow Us</h3>
+            <ul>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Thread</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>
